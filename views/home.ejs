@@ -4,4 +4,39 @@
     <h2 class="text-center">Add New Student</h2>
  </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/add/student" method="post">
+                <div class="mb-3">
+                    <label for="rollNo" class="form-label">Roll No</label>
+                    <input type="text" class="form-control" id="rollNo" name="rollNo">
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="fatherName" class="form-label">Father Name</label>
+                    <input type="text" class="form-control" id="fatherName" name="fatherName">
+                </div>
+                <div class="mb-3">
+                    <label for="adharCard" class="form-label">Aadhar Card</label>
+                    <input type="text" class="form-control" id="adharCard" name="adharCard">
+                </div>
+                <div class="mb-3">
+                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobileNumber" name="mobileNumber">
+                </div>
+                <button type="submit" value="Add student" class="btn btn-primary my-3 w-100">Submit</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
 <%- include ("./base/footer.ejs") %>
