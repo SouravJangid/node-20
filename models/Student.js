@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
     rollNo: {type: String , required: true},
-    fistName: {type: String},
+    firstName: {type: String},
     lastName: {type: String},
     fatherName: {type: String},
     adharCard: {type: String},

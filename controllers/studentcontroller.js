@@ -5,14 +5,22 @@ async function addStudent(req, res) {
         // console.log(req.body);
         const student = new Student(req.body);
         await student.save();
-        res.render('success',{message:'data add successfully....'});
+        res.render('studentinsert',{message:'data add successfully....'});
        
     }catch(error){
         console.log(error);
     }
 };
 
-
+async function getStudents(req, res){
+    try{
+        const students = await Student.find();
+        res.render('studentlist',{students: students});
+    }catch(error){
+        console.log(error);
+    }
+}
 module.exports = {
-    addStudent
+    addStudent,
+    getStudents,
 }
