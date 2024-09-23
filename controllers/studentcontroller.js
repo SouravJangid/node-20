@@ -19,8 +19,31 @@ async function getStudents(req, res){
     }catch(error){
         console.log(error);
     }
+};
+
+
+async function editStudent(req,res){
+    try{
+        const student = await Student.findOne({_id:req.params.id });
+        res.render('studentedit',{student: student});
+    }catch(error){console.log(error);
 }
+
+}
+
+
+async function updateStudent(req,res){
+    try{
+        const student = await Student.findOneAndUpdate({_id:req.params.id},req.body,{new: true});
+        res.redirect('/student');
+    }catch(error){console.log(error);
+}
+}
+
+
 module.exports = {
     addStudent,
     getStudents,
+    editStudent,
+    updateStudent,
 }

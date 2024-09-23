@@ -12,17 +12,19 @@
                         <th>Father Name</th>
                         <th>Aadhar Card</th>
                         <th>Mobile Number</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
                     <% students.forEach(student => { %>
                         <tr>
-                            <td><%= student.rollNo %></td>
+                            <td ><%= student.rollNo %></td>
                             <td><%= student.firstName %></td>
                             <td><%= student.lastName %></td>
                             <td><%= student.fatherName %></td>
                             <td><%= student.adharCard %></td>
                             <td><%= student.mobileNumber %></td>
+                            <td><a href="/edit/student/page/<%= student._id %>" class="btn btn-info w-75">Edit</a></td>
                         </tr>
                     <% }); %>
                 </tbody>
