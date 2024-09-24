@@ -24,7 +24,10 @@
                             <td><%= student.fatherName %></td>
                             <td><%= student.adharCard %></td>
                             <td><%= student.mobileNumber %></td>
-                            <td><a href="/edit/student/page/<%= student._id %>" class="btn btn-info w-75">Edit</a></td>
+                            <td>
+                                <a href="/edit/student/page/<%= student._id %>" class="btn btn-info w-75">Edit</a>
+                                <a href="/delete/student/<%= student._id %>" class="btn btn-danger mt-3 w-75">Delete</a>
+                            </td>
                         </tr>
                     <% }); %>
                 </tbody>

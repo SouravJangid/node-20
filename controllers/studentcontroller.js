@@ -34,16 +34,23 @@ async function editStudent(req,res){
 
 async function updateStudent(req,res){
     try{
-        const student = await Student.findOneAndUpdate({_id:req.params.id},req.body,{new: true});
+        const student = await Student.findOneAndUpdate({_id:req.params.id},req.body);
         res.redirect('/student');
     }catch(error){console.log(error);
 }
 }
 
+async function deleteStudent(req,res){
+    try{
+        await Student.findByIdAndDelete(req.params.id);
+        res.redirect('/student');
+    }catch(error){console.log(error);}
+}
 
 module.exports = {
     addStudent,
     getStudents,
     editStudent,
     updateStudent,
+    deleteStudent
 }
